@@ -50,6 +50,8 @@ class DatabaseInitDataCommand extends Command
                 $userEntity = new User();
                 $userEntity->setName($user['name']);
                 $userEntity->setAvatarUrl($user['avatar_url']);
+				$userEntity->setEmail($user['email']);
+                $userEntity->setPassword($user['password']);
                 $this->em->persist($userEntity);
             }
         }
